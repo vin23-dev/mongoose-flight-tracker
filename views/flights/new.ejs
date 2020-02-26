@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <form id='new-form' action="/flights/new" method="POST">
+
+        <label>Airline:
+          <select name="airline">
+            <option value="United">United</option>
+            <option value="Southwest">Southwest</option>
+            <option value="Delta">Delta</option>
+            </select>
+        </label><br>
+        <br>
+    
+        <label>Flight Number:
+          <input type="text" name="flightNo">
+        </label>
+        <br>
+        <label>Departure date:</label>
+          <input type="datetime-local" name="departs">
+        <br>
+        <label> Departure airport:
+        <select name="airport">
+        </label>    
+        <option value="AUS">AUN</option>
+        <option value="DAL">DAL</option>
+        <option value="LAX">LAX</option>
+        <option value="SEA">SEA</option>
+      </select>
+      <br>
+    <input type='submit' value='Add Flight'>
+    </form>
+</body>
+</html>
