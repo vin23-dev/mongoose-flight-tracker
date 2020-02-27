@@ -6,8 +6,8 @@ var logger = require('morgan');
 
 require('./config/database');
 
-var indexRouter = require('./routes/index');
-var flightsRouter = require('./routes/flights');
+let indexRouter = require('./routes/index');
+let flightsRouter = require('./routes/flights');
 
 var app = express();
 

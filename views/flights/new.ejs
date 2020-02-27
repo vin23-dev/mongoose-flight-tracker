@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+  <%- include('../partials/header') %>
     <form id='new-form' action="/flights/new" method="POST">
 
         <label>Airline:
@@ -28,7 +29,7 @@
         <label> Departure airport:
         <select name="airport">
         </label>    
-        <option value="AUS">AUN</option>
+        <option value="AUS">AUS</option>
         <option value="DAL">DAL</option>
         <option value="LAX">LAX</option>
         <option value="SEA">SEA</option>
@@ -36,5 +37,6 @@
       <br>
     <input type='submit' value='Add Flight'>
     </form>
+<%- include('../partials/footer') %>
 </body>
 </html>
