@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<form id='new-form' action="/flights/update/<%= flight._id %>" method="POST">
+
+	<label>Airline:
+	  <select name="airline" value="<%= flight.airline %>">
+		<option value="<%= flight.airline %>"><%= flight.airline%></option>
+	    <option value="United">United</option>
+	    <option value="Southwest">Southwest</option>
+	    <option value="Delta">Delta</option>
+		</select>
+	</label><br>
+	<br>
+<label>Flight Number:
+	<input type="text" value="<%= flight.flightNumber%>" name="flightNumber">
+</label>
+	<br>
+<label>Departure date:</label>
+	<input type="datetime-local" value="<%= flight.departs %>" name="departs">
+	<br>
+<label> Departure airport:
+<select name="departingAirport">
+	</label>
+	<option value="<%= flight.departingAirport %>"><%= flight.departingAirport %></option>
+    <option value="AUS">AUS</option>
+    <option value="DAL">DAL</option>
+    <option value="LAX">LAX</option>
+    <option value="SEA">SEA</option>
+  </select>
+  <br>
+<input type='submit' value='Update Flight'>
+</form>
+<%- include('../partials/footer') %>
