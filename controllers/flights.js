@@ -32,13 +32,13 @@ function newFlightView(req, res) {
 
 function createFlight(req, res) {
     if(!req.body.departs){
-        var redate = new Date();
+        let redate = new Date();
         redate.setFullYear(redate.getFullYear() +1);
         req.body.departs = redate
     }
     let flight = new Flight(req.body);
     flight.save(function(err) {
-        if (err) return res.redirect('/flights/new', {title: 'Add Flight'});
+        if (err) return res.redirect('/flights/new', { title: 'Add Flight' });
         console.log(flight);
         res.redirect('/flights');
     });
@@ -70,9 +70,9 @@ function showUpdate(req, res) {
 
 function update(req, res){
     if (!req.body.departs){
-        let newDate = new Date();
-        newDate.setFullYear(newDate.getFullYear() +1);
-        req.body.departs = newDate;
+        let redate = new Date();
+        redate.setFullYear(redate.getFullYear() +1);
+        req.body.departs = redate;
     }
     Flight.findByIdAndUpdate(req.params.id, req.body, function(err, flights){
         res.redirect('/flights/');
